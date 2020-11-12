@@ -1,14 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-// Requiring function causes error during builds
-// as the code tries to reference window
-const module = require("module") // Error
+import { window, document } from "browser-monads";
 
-// Wrap the require in check for window
-if (typeof window !== `undefined`) {
-  const module = require("module")
-}
+// Your code will build now!
+console.log(`Location: ${window.location.href}`);
 
 type Props = {
   location: any;
