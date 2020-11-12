@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import { window, document } from "browser-monads";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
