@@ -5,7 +5,19 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+interface Props {
+  data: {
+    allMarkdownRemark: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+  location?: any;
+}
+
+const BlogIndex: React.FC<Props> = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
