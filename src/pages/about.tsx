@@ -26,7 +26,7 @@ const UsingBalls: React.FC<PageProps<DataProps>> = ({
       <SEO title="Using Balls" />
       <h1>Damian Esteban</h1>
       <p>
-        Hello. My name is Damian Esteban. I am a software engineer, solution architect, leader, and lover.
+        Hello. My name is Damian Esteban. I am a software engineer, solution architect, leader, and lover. Oh, and a nerd.
       </p>
       <p>
         You're currently on the page "{path}" which was built on{" "}
