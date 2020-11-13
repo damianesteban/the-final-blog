@@ -42,7 +42,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-plugin-netlify-cms',
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -70,8 +69,15 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.ts`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: damianesteban/the-final-blog # Path to your GitHub repository
 
 media_folder: static/assets
 public_folder: /assets
@@ -14,3 +15,9 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: tags
+    label: Tags
+    folder: tags
+    widget: tags
+    separator: ","
+    required: false
