@@ -15,9 +15,9 @@ export class TagControl extends React.Component<Props, {}> {
     super(props);
   }
 
-  handleChange = e => {
+  handleChange = (e: any) => {
     const separator = this.props.field.get('separator', ', ')
-    this.props.onChange(e.target.value.split(separator).map((e) => e.trim()));
+    this.props.onChange(e.target.value.split(separator).map((e: any) => e.trim()));
   }
 render() {
     const separator = this.props.field.get('separator', ', ');

@@ -2,6 +2,7 @@ backend:
   name: github
   repo: damianesteban/the-final-blog # Path to your GitHub repository
 
+publish_mode: editorial_workflow
 media_folder: static/assets
 public_folder: /assets
 
@@ -15,6 +16,7 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+
   - name: tags
     label: Tags
     folder: tags
