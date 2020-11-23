@@ -9,7 +9,7 @@ export class TagPreview extends React.Component<Props, {}> {
     return React.createElement('ul', {
       className: "tags",
     },
-      this.props.value.map(function(value, index) {
+      this.props.value.map(function(value: any, index: number) {
         return React.createElement('li', {
           className: "tags",
           key: index

@@ -1,14 +1,16 @@
 backend:
   name: github
   repo: damianesteban/the-final-blog # Path to your GitHub repository
+  base_url: https://api.netlify.com
+  site_domain: blog.damian-esteban.com
 
 publish_mode: editorial_workflow
-media_folder: static/assets
-public_folder: /assets
+media_folder: content/assets
+public_folder: public
 
 collections:
-  - name: blog
-    label: Blog
+  - name: 'blog'
+    label: 'Blog'
     folder: blog
     create: true
     fields:
