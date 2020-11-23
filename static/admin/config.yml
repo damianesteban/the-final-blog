@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: damianesteban/the-final-blog # Path to your GitHub repository
+  name: git-gateway
+  # repo: damianesteban/the-final-blog # Path to your GitHub repository
   branch: master
 
 media_folder: "content/assets"
