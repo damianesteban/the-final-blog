@@ -69,6 +69,16 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-tinacms',
+      options: {
+        enabled: true,
+        sidebar: true,
+        plugins: [
+        ],
+        position: 'fixed'
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {

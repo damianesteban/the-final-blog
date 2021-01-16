@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { useForm, usePlugin } from 'tinacms'
 
 import Bio from '../components/bio'
 import Layout from '../components/layout'
@@ -13,7 +14,29 @@ interface Props {
 }
 
 const BlogPostTemplate: React.FC<Props> = ({ data, location }) => {
-  const post = data.markdownRemark
+  const formConfig = {
+    id: data.markdownRemark.id,
+    label: "Blog Post",
+    initialValues: data.markdownRemark,
+    onSubmit: (values: any) => {
+      alert(`Submitting ${values.frontmatter.title}`)
+    },
+    fields: [
+      {
+        name: "frontmatter.title",
+        label: "Title",
+        component: "text",
+      },
+      {
+        name: "frontmatter.description",
+        label: "Description",
+        component: "textarea",
+      },
+    ],
+  }
+  const [post, form] = useForm(formConfig)
+  usePlugin(form)
+  //const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
